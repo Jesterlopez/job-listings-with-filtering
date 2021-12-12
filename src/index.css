@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+}
+
+body {
+  background: theme('backgroundColor.color-secundary');
+}
+
+.border-teal-custom {
+  border-color: theme('backgroundColor.color-primary');
+}
+
+.bg-secundary {
+  background-color: theme('backgroundColor.color-secundary');
+}
+
+.bg-head-custom {
+  background-color: theme('backgroundColor.color-primary');
+  background-size: 100% 100%;
+}
+
+.text-teal-custom {
+  color: theme('backgroundColor.color-primary');
+}
