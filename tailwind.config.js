@@ -9,7 +9,11 @@ module.exports = {
       },
       margin: {
         'neg-32': '-8rem'
-      }
+      },
+      screens: {
+        'md': { 'max': '768px' },
+        'lg': '768px'
+      },
     },
     textColor: theme => ({
       ...theme('colors'),

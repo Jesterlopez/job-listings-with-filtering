@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Job from './components/Job'
 import Filters from './components/Filters'
-import { getData, getDataForCategorys } from './utils/fetching'
+import { getData, getDataForCategories } from './utils/fetching'
 
 function App() {
   const [allData, setAllData] = useState([])
@@ -15,7 +15,7 @@ function App() {
 
 
   useEffect(() => {
-    getDataForCategorys(filters[filters.length - 1]).then(response => setDataForCategory(response))
+    getDataForCategories(filters[filters.length - 1]).then(response => setDataForCategory(response))
   }, [filters])
 
   const handleFilter = (filter) => {
@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className='w-full px-36 py-20 flex flex-col'>
+      <main className='w-full xl:px-36 py-20 flex flex-col md:px-5 lg:px-10'>
         {filters.length > 0 && <Filters filter={filters} handleRemoveFilter={handleRemoveFilter} handleClearFilters={handleClearFilters} />}
         {dataForCategory.length > 0 ?
           dataForCategory?.map((job) => {

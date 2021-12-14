@@ -1,10 +1,10 @@
 export const getData = () => {
-  return fetch('data.json')
+  return fetch('./data.json')
     .then(res => res.json())
 }
 
 export const getDataForCategory = async (category) => {
-  return await fetch('data.json')
+  return await fetch('./data.json')
     .then(res => res.json())
     .then(response => {
       const objectData = []
@@ -28,7 +28,7 @@ export const getDataForCategory = async (category) => {
     })
 }
 
-export const getDataForCategorys = async (category) => {
+export const getDataForCategories = async (category) => {
   const categories = category
   return await fetch('data.json')
     .then(res => res.json())
@@ -50,7 +50,6 @@ export const getDataForCategorys = async (category) => {
           }
         }))
       })
-      console.log(objectData)
       return objectData
     })
 }
